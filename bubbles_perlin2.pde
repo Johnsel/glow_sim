@@ -31,7 +31,7 @@ void setup() {
     smooth();
     noStroke();
     
-    //frameRate(60);
+    frameRate(1);
     smooth(4);
      
     int y = CONTROL_SPACING;
