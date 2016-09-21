@@ -11,8 +11,11 @@ int CONTROL_HEIGHT = 10;
 int CONTROL_SPACING = 2;
 ControlP5 controls;
  
-int WIDTH = 1024;
-int HEIGHT = 800;
+int WIDTH = 1920;
+int HEIGHT = 1000;
+int num_Modules_x = 4;
+int num_Modules_y = 5;
+
 public int MAX_N = 336;
 public int N =336;
 public float RADIUS = HEIGHT/40;
@@ -27,8 +30,7 @@ ArtNetListener artNetListener;
 byte[] inputDmxArray;
 
 void setup() { 
-    size(1024, 800, P2D);
-    smooth();
+    size(1920, 1080, P2D);
     noStroke();
     
     frameRate(1);
@@ -66,8 +68,11 @@ float xoffs = 0;
 float yoffs = 0;
 void draw() {
     background(BACKGROUND);
-    
-    image(img, 0, 0);
+    for (int j = 0; j < num_Modules_y; j++) {
+      for (int i = 0; i < num_Modules_x; i++) {
+        image(img, i * 480, j * 216);
+      }
+    }
     xoffs = 0;//xoffs*0.9 + 0.1*((float)mouseX/(float)WIDTH);
     yoffs = 0;///yoffs*0.9 + 0.1*((float)mouseY/(float)HEIGHT);
      

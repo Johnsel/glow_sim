@@ -8,7 +8,7 @@ public int BLUR_LEVEL_COUNT = 1;
 public float BLUR_AMOUNT = 5.0;
 public float VISIBILITY_RANGE = 0.95;
 public float FOCAL_LENGTH = 0.9;
-public color BACKGROUND = color(0, 30, 30);
+public color BACKGROUND = color(0, 0, 0);
  
 class ZObject implements Comparable {
     float radius;
